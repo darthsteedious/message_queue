@@ -43,9 +43,3 @@ fn main() {
     //     warn!("Application exiting.");
     // }
 }
-
-fn fork_workers() -> Result<()> {
-
-
-    Ok(())
-}

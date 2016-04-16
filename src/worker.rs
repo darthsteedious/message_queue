@@ -23,6 +23,8 @@ pub struct Worker {
     response_pipe: (RawFd, RawFd)
 }
 
-impl Worker {
-    pub fn send_message()
-}
+// impl Worker {
+//     pub fn send_message(message: Message) - > Result<()> {
+//
+//     }
+// }
