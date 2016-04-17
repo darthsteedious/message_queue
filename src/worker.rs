@@ -2,6 +2,7 @@ extern crate nix;
 
 use std::os::unix::io::RawFd;
 use nix::sys::ioctl::libc::pid_t;
+use nix::unistd::{getpid};
 
 pub enum Action {
     Create(String, i32),
@@ -23,8 +24,12 @@ pub struct Worker {
     response_pipe: (RawFd, RawFd)
 }
 
-// impl Worker {
-//     pub fn send_message(message: Message) - > Result<()> {
-//
-//     }
-// }
+impl Worker {
+    pub fn send_message(message: Message) {
+
+    }
+    pub fn await_message() -> Message {
+        let id: u32 = 1;
+        Message { origin: id, pid: getpid(), action: Action::Read("foo".to_string()) }
+    }
+}
